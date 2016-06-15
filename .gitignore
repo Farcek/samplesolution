@@ -1,0 +1,8 @@
+core/node_modules/*
+core/typings/*
+core/config/*.js
+sysop/sysop-serve/node_modules*
+sysop/sysop-serve/typings/*
+sysop/sysop-www/bower_components/*
+sysop/sysop-www/typings/*
+.vscode

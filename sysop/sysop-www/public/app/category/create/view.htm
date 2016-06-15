@@ -1,0 +1,9 @@
+<div ng-controller="CtrlCategoryCreate as ctrl">
+    create
+    <form name="frm" novalidate ng-submit="ctrl.submit(frm)">
+        <input name="name" ng-model="ctrl.mdl.name" required>
+
+        <button type="submit"> sumbit</button>
+    </form>
+    {{ctrl.mdl}}
+</div>

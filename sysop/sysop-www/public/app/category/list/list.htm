@@ -1,0 +1,7 @@
+<div ng-controller="CtrlCategoryList as ctl">
+    total: {{ctl.total}}
+    <ul>
+        <li ng-repeat="it in ctl.items">{{it}}</li>
+        <li ng-if="ctl.item.length ==0"> empty</li>
+    </ul>
+</div>

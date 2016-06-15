@@ -1,0 +1,9 @@
+{
+  "name": "samplecore",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "mysql": "^2.11.1",
+    "sequelize": "^3.23.3"
+  }
+}
