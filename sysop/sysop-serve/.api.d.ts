@@ -1,3 +1,6 @@
+/// <reference path="../../core/.config.d.ts" />
+/// <reference path="../../core/.model.d.ts" />
+
 declare namespace sysopapi {
 
     namespace category {

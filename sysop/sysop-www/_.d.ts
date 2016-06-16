@@ -1,0 +1,1 @@
+/// <reference path="../sysop-serve/.api.d.ts" />
