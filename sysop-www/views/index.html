@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+@import "brand.txt"
+-->
+<html lang="en" ng-app="sysop">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="/public/image/icon.png">
+
+    <title>[{title}]</title>
+    <!-- build:css /build/vendor-${vendor}.css-->
+    <link rel="stylesheet" href="/public/style/theme.css" charset="utf-8">
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" charset="utf-8">
+    <!-- endbuild -->
+
+    <!-- build:css /build/app-${vendor}.css-->
+    <link rel="stylesheet" href="/sass/style.css" charset="utf-8">
+    <!-- endbuild -->
+</head>
+
+<body ng-controller="MainCtrl as $ctrlMain">
+<div class="body-wrap" ui-view></div>
+<div ngui-notify></div>
+
+<!-- build:js (aaa) /build/vendor-${vendor}.js-->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<!--<script src="/bower_components/foundation-sites/dist/foundation.js"></script>-->
+<!--<script src="/bower_components/foundation-sites/js/foundation.offcanvas.js"></script>-->
+
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/bower_components/angular-messages/angular-messages.js"></script>
+<script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="/bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+
+<!--<script src="/bower_components/ng-flow/dist/ng-flow-standalone.js"></script>-->
+
+<!--<script src="/bower_components/d3/d3.min.js"></script>-->
+<!--<script src="/bower_components/pie-chart/dist/pie-chart.min.js"></script>-->
+<!--<script src="/bower_components/Chart.js/dist/Chart.js"></script>-->
+
+
+<script src="/bower_components/ngui/form/form.js"></script>
+<script src="/bower_components/ngui/alert/alert.js"></script>
+<script src="/bower_components/ngui/notify/notify.js"></script>
+<script src="/bower_components/ngui/core.js"></script>
+<script src="/bower_components/ngui/syspanel/syspanel.js"></script>
+<!--<script src="/bower_components/ngui/auth/auth.js"></script>-->
+<!-- endbuild -->
+<!-- build:js /build/app-${build}.js-->
+<script src="/app/app.js"></script>
+<script src="/app/layout.js"></script>
+<script src="/app/directives/menu/menu.js"></script>
+<script src="/app/app.modules.js"></script>
+<script src="/app/ngui.js"></script>
+<!--<script src="/public/app/foundation.js"></script>-->
+<!--<script src="/public/app/eggly.js"></script>-->
+<!--<script src="/public/app/chart.js"></script>-->
+<!--<script src="/public/app/uploader.js"></script>-->
+<!--<script src="/public/app/menu/menu.js"></script>-->
+<!--<script src="/public/app/secret.js"></script>-->
+
+
+<script src="/app/home/route.js"></script>
+<!--<script src="/public/app/about/route.js"></script>-->
+<script src="/app/category/route.js"></script>
+<!-- endbuild -->
+</body>
+
+</html>

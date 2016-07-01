@@ -1,0 +1,40 @@
+<div class="panel" style="background-color: #f5f5f5;">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-9 col-md-11">
+                <ol class="breadcrumb app-breadcrumb" app-breadcrumb data={{data}}>
+                    <li><a ui-sref="home">Нүүр</a></li>
+                    <li class="active">Ангилал</li>
+                    </ol>
+            </div>
+            <div class="col-xs-3 col-md-1">
+                <div type="button" class="btn btn-primary action-button" role="button" ui-sref="category.create">Нэмэх</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel">
+    <div class="panel-body">
+        <div ng-controller="CtrlCategoryList as ctrl">
+             <table class="table table-bordered table-striped">
+                <thead>
+                    <th>ID</th>
+                    <th>Нэр</th>
+                    <th>Засах / Устгах</th>
+                </thead>
+                <tr ng-repeat="item in ctrl.items">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>
+                        <button class="btn btn-warning action-button" ui-sref="category.edit({id: item.id})">Засах</button>
+                        <button class="btn btn-danger action-button" ng-click="ctrl.remove(item)">Устгах</button>
+                    </td>
+                </tr>
+            </table>
+            <ul>
+                <li ng-repeat="it in ctl.items">{{it}}</li>
+                <li ng-if="ctl.item.length ==0"> empty</li>
+            </ul>
+        </div>
+    </div>
+</div>

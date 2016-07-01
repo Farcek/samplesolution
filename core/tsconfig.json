@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "build"
+  },
+  "files": [
+    "../d.ts/config.d.ts",
+    "typings/index.d.ts",
+    "src/IModel.d.ts",
+    "src/core.ts"
+  ]
+}

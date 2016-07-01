@@ -1,0 +1,15 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "removeComments": true,
+    "rootDir": "src",
+    "outDir": "build"
+  },
+  "files": [
+    "../d.ts/config.d.ts",
+    "typings/index.d.ts",
+    "../core/src/IModel.d.ts",
+    "src/IApi.d.ts",
+    "src/serve.ts"
+  ]
+}

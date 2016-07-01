@@ -1,0 +1,32 @@
+html,body,
+.body-wrap {
+  height: 100%;
+}
+
+
+.app-breadcrumb {
+  background: transparent;
+  color: #113;
+  margin-bottom: 0px;
+}
+.action-button {
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+[ngui-notify] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  z-index: 9999;
+  padding: 10px;
+}
+.nav-display {
+  display: block !important;
+}
+
+@import "../bower_components/ngui/syspanel/style.scss";
+
+.time-syspanel {
+  @include syspanel(280px,51px);
+}

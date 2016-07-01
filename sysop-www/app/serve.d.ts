@@ -1,0 +1,1 @@
+/// <reference path="../../sysop-serve/src/IApi.d.ts" />

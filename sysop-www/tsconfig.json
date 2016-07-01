@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "rootDir": "app",
+        "outDir": "build/app"
+    },
+    "exclude": [
+        "node_modules",
+        "bower_components",
+        "jspm_packages"
+    ]
+}
