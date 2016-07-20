@@ -6,7 +6,7 @@
     "outDir": "build"
   },
   "files": [
-    "../d.ts/config.d.ts",
+    "../config/config.d.ts",
     "typings/index.d.ts",
     "../core/src/IModel.d.ts",
     "src/IApi.d.ts",

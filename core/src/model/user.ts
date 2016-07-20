@@ -2,7 +2,7 @@ import * as Sequelize from 'sequelize';
 import * as mixing from './mixing';
 
 
-export type IAttributes = sample.model.category.IAttributes;
+export type IAttributes = sample.model.user.IAttributes;
 
 export interface IInstance extends IAttributes, Sequelize.Instance<IAttributes> {
 
@@ -15,11 +15,9 @@ export interface IModel extends Sequelize.Model<IInstance, IAttributes> {
 
 export function define(sequelize:Sequelize.Sequelize):IModel {
 
-    var d:IModel;
-
 
     var options:Sequelize.DefineOptions<IInstance> = {
-        tableName: "category",
+        tableName: "user",
         timestamps: false,
         classMethods: {},
         instanceMethods: {}
@@ -27,7 +25,12 @@ export function define(sequelize:Sequelize.Sequelize):IModel {
 
     return sequelize.define<IInstance, IAttributes>('Category', {
         id: mixing.idIntIncrement,
-        
-        name: mixing.name
+        username: {
+            type: Sequelize.STRING,
+        },
+        password: {
+            type: Sequelize.STRING,
+        }
+
     }, options);
 }

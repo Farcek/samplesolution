@@ -7,7 +7,7 @@
     "outDir": "build"
   },
   "files": [
-    "../d.ts/config.d.ts",
+    "../config/config.d.ts",
     "typings/index.d.ts",
     "src/IModel.d.ts",
     "src/core.ts"

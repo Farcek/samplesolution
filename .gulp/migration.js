@@ -4,8 +4,6 @@ var Umzug = require('umzug');
 var minimist = require('minimist');
 var Sequelize = require('sequelize');
 
-var config = require('../config');
-
 gulp.task('migration:new', shell.task('sequelize migration:create --url="mysql://root:pass@test.com/test" --migrations-path="core/migrations" --name=${name()}', {
     templateData: {
         name: function () {
@@ -34,6 +32,7 @@ gulp.task('migration:down', function () {
 });
 
 function getUmzug() {
+    var config = require('../config');
     var conf = config.db;
 
     var sequelize = new Sequelize(conf.database, conf.username, conf.password, {

@@ -9,4 +9,11 @@ declare namespace sample.model {
             name: string;
         }
     }
+    export namespace user {
+        export interface IAttributes {
+            id?: number;
+            username: string;
+            password: string;
+        }
+    }
 }

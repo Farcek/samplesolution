@@ -1,25 +1,28 @@
 import * as Sequelize from 'sequelize';
 
 import * as category from "./category";
-
+import * as user from "./user";
 
 
 export default class Model {
-    public Category: category.IModel
-    private sequelize: Sequelize.Sequelize;
+    private sequelize:Sequelize.Sequelize;
 
 
-    constructor(conf: IConfig) {
+    public Category:category.IModel;
+    public User:user.IModel;
+
+    constructor(conf:IConfig) {
         this.sequelize = this.sq(conf);
 
 
         this.Category = category.define(this.sequelize);
+        this.User = user.define(this.sequelize);
 
         this.associate();
         this.sync();
-
     }
-    private sq(conf: IConfig): Sequelize.Sequelize {
+
+    private sq(conf:IConfig):Sequelize.Sequelize {
         return new Sequelize(conf.database, conf.username, conf.password, {
             host: conf.host,
             dialect: conf.dialect,
@@ -38,24 +41,22 @@ export default class Model {
 
     private sync() {
         this.sequelize
-            .sync({ force: true })
-            .then(function () {
-                console.log('DB. It worked!');
-            }, function (err) {
-                console.log('An error occurred while creating the table:', err);
+        //.sync({ force: true })
+            .authenticate()
+            .then(function (errors) {
+                console.log('db errors :', errors);
             });
-
     }
 }
 
 export interface IConfig {
-    database: string,
-    username: string,
-    password: string,
+    database:string,
+    username:string,
+    password:string,
 
-    host: string,
-    dialect: string,
+    host:string,
+    dialect:string,
 
-    pool: any,
-    logging: any
+    pool:any,
+    logging:any
 }

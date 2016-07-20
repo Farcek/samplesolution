@@ -14,3 +14,8 @@ core/build/*
 sysop-serve/build/*
 sysop-www/build/*
 sysop-www/bower_components/*
+web-serve/build/*
+web-serve/typings/*
+web-www/bower_components/*
+web-www/typings/*
+web-www/build/*
