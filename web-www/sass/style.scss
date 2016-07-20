@@ -1,0 +1,12 @@
+html,body,
+.body-wrap {
+  height: 100%;
+  width: 100%;
+}
+
+
+@import "../bower_components/ngui/syspanel/style.scss";
+
+.time-syspanel {
+  @include syspanel(280px,51px);
+}

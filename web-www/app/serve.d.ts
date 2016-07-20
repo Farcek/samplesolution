@@ -1,0 +1,1 @@
+/// <reference path="../../web-serve/src/IApi.d.ts" />
